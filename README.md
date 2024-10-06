@@ -6,6 +6,8 @@ Suas funcionalidades são:
 - Listar todos os dados.
 - Filtar dados dos usuários pelo domino Ex: '@gmail.com'.
 
+Acesse: https://github.com/dezoliveira/csv-reader
+
 ---
 #### Tecnologias 
 - Python

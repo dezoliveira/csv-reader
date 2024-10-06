@@ -9,3 +9,42 @@ id,nome,email
 8,Clark Kent,clarkelouis@gmail.com
 9,Peter Park,imnotspiderman@gmail.com
 10,Andres Oliveira,andresoliveira@protonmail.com
+
+####### VALIDAÇÕES #######
+
+# Valida se arquivo é CSV
+def valida_arquivo(arquivo):
+    if not(arquivo.endswith('.csv')):
+        return False
+
+    return True
+
+def listar_emails_por_dominio(nome_arquivo, filtro):
+    if valida_arquivo(nome_arquivo):
+        with open(nome_arquivo, mode='r', encoding='utf8') as arquivo_csv:
+            reader = csv.DictReader(arquivo_csv)
+            print(f"E-mails do dominio: '{filtro}' ")
+
+            for linha in reader:
+                if linha['email'].endswith(filtro):
+                    print(f"ID: {linha['id']}, Nome: {linha['nome']}")
+                else:
+                    print(f"Dominio: '{filtro}' não encontrado")
+                    
+# Lista os emails por filtro
+def listar_emails_por_dominio(reader, filtro):
+    count = 0
+    print(f"E-mails do dominio: '{filtro}' ")
+
+    for linha in reader:
+        if linha['email'].endswith(filtro):
+            count = count + 1
+            print(f"ID: {linha['id']}, Nome: {linha['nome']}")
+
+    if (count == 0):
+            print(f"Domino '{filtro} não encontrado' ")
+            
+            
+            https://onecompiler.com/oracle/42ubfqxk6
+            
+AA
